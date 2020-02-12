@@ -1,12 +1,11 @@
 ## activemq-integration
 ##### Integração entre api's com ActiveMQ e JMS
 [Lista de MOM(Message Oriented Middleware)](https://en.wikipedia.org/wiki/Message_broker)
-##### EAI (Enterprise Application Integration)
-* os 4 Estilos de Integração
-    * File Transfer
-    * Shared Database
-    * Remote Procedure Invocation
-    * Messaging
+##### EAI (Enterprise Application Integration) os 4 Estilos de Integração:
+    1. File Transfer
+    2. Shared Database
+    3. Remote Procedure Invocation
+    4. Messaging
     
 <hr></hr>
 
