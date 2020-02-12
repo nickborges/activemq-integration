@@ -1,6 +1,6 @@
 ## activemq-integration
 ##### Integração entre api's com ActiveMQ e JMS
-*[Lista de MOM(Message Oriented Middleware)](https://en.wikipedia.org/wiki/Message_broker)*
+[Lista de MOM(Message Oriented Middleware)](https://en.wikipedia.org/wiki/Message_broker)
 
 <hr></hr>
 
