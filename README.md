@@ -1,7 +1,13 @@
 ## activemq-integration
 ##### Integração entre api's com ActiveMQ e JMS
 [Lista de MOM(Message Oriented Middleware)](https://en.wikipedia.org/wiki/Message_broker)
-
+##### EAI (Enterprise Application Integration)
+* os 4 Estilos de Integração
+    * File Transfer
+    * Shared Database
+    * Remote Procedure Invocation
+    * Messaging
+    
 <hr></hr>
 
 ###### 1. [Download ActiveMQ](https://activemq.apache.org/components/classic/download/)
@@ -11,6 +17,3 @@
     http://0.0.0.0:8161/
 ###### 4. ActiveMQ Jolokia REST API 
     http://0.0.0.0:8161/api/jolokia/
-###### 5. 
-###### 6. 
-###### 7. 
