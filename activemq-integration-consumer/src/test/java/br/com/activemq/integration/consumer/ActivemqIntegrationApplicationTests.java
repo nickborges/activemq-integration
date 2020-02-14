@@ -1,4 +1,4 @@
-package br.com.activemq.integration.activemqintegration;
+package br.com.activemq.integration.consumer;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

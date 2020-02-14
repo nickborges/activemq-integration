@@ -1,4 +1,4 @@
-package br.com.activemq.integration.activemqintegration;
+package br.com.activemq.integration.consumer;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -16,3 +16,5 @@
     http://0.0.0.0:8161/
 ###### 4. ActiveMQ Jolokia REST API 
     http://0.0.0.0:8161/api/jolokia/
+###### 5. Criar o consumidor
+	https://activemq.apache.org/jndi-support.html
