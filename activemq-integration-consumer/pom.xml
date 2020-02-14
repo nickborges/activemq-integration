@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>br.com.activemq.integration</groupId>
-	<artifactId>activemq-integration</artifactId>
+	<artifactId>activemq-integration-consumer</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>activemq-integration</name>
+	<name>activemq-integration-consumer</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
