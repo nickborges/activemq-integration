@@ -16,5 +16,6 @@
     http://0.0.0.0:8161/
 ###### 4. ActiveMQ Jolokia REST API 
     http://0.0.0.0:8161/api/jolokia/
-###### 5. Criar o consumidor
+###### 5. Criar o consumidor e criador das mensagens
 	https://activemq.apache.org/jndi-support.html
+###### 6. Criar os tópicos
