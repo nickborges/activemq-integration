@@ -6,6 +6,8 @@
     2. Shared Database
     3. Remote Procedure Invocation
     4. Messaging
+
+![Diagrama](modelo.png)
     
 <hr></hr>
 
