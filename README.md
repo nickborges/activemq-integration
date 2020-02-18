@@ -70,6 +70,10 @@
     - Prioridade da mensagem na fila, quanto maior o número mais alta a prioridade de 0 até 9
         messagePostProcessor.setJMSPriority(9);
 
+        não vem por padrão com o suporte a priorização ativado, sendo necessário ativá-lo no arquivo activemq.xml
+        
+        ativando prioridade: http://activemq.apache.org/how-can-i-support-priority-queues.html
+
     - Tempo de vida de mensagem em milesegundos
         messagePostProcessor.setJMSDeliveryTime(5000);
 
