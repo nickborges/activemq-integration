@@ -23,7 +23,14 @@ public class ProducerComponent {
     }
 
     public void runTopic(String msg){
-        jmsTemplate.convertAndSend( new ActiveMQTopic(topic), msg);
+        jmsTemplate.convertAndSend(new ActiveMQTopic(topic), msg);
     }
+    
+	public void runTopiSelector(String msg, boolean ativo) {
+		jmsTemplate.convertAndSend(new ActiveMQTopic(topic), msg, messagePostProcessor -> {
+			messagePostProcessor.setBooleanProperty("item", ativo); //define o atrivo e o valor que o consumidor deve filtrar
+			return messagePostProcessor;
+		});
+	}
 
 }

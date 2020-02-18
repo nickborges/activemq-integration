@@ -21,3 +21,26 @@
 ###### 5. Criar o consumidor e criador das mensagens
 	https://activemq.apache.org/jndi-support.html
 ###### 6. Criar os tópicos
+
+###### 7. Seletor dentro do tópico
+    https://activemq.apache.org/selectors.html
+    
+	*Producer*
+
+	public void runTopiSelector(String msg, boolean ativo) {
+		jmsTemplate.convertAndSend(new ActiveMQTopic(topic), msg, messagePostProcessor -> {
+			messagePostProcessor.setBooleanProperty("item", ativo); //define o atrivo e o valor que o consumidor deve filtrar
+			return messagePostProcessor;
+		});
+	}
+
+	*Consumer*
+
+	@JmsListener(id = "primeiroTopicoId",
+                 destination = "${topic.primeiroTopico}",
+                 containerFactory = "jmsFactoryTopic",
+                 subscription = "primeiroTopico",
+                 selector = "item is null OR item=true")
+    public void onReceiverTopic(String str) {
+        System.out.println(str);
+    }

@@ -23,5 +23,11 @@ public class ActiveMqProducerController {
         producerComponent.runTopic(mensagem);
         return ResponseEntity.ok("Tópico : " + mensagem + " envida com suceso!");
     }
+    
+    @PostMapping("/topic/producer/{ativo}")
+    public ResponseEntity topicExecute(@PathVariable boolean ativo, @RequestBody String mensagem){
+        producerComponent.runTopiSelector(mensagem, ativo);
+        return ResponseEntity.ok("Tópico : " + mensagem + " envida com suceso!");
+    }
 
 }
