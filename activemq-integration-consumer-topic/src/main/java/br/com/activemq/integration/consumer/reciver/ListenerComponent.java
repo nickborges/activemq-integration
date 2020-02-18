@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class ListenerComponent {
 
-    @JmsListener(destination = "${topic.primeiroTopico}", id = "primeiroTopicoId", containerFactory = "jmsListenerContainerFactory")
+    @JmsListener(destination = "${topic.primeiroTopico}", id = "primeiroTopicoId", containerFactory = "jmsFactoryTopic")
     public void onReceiverTopic(String str) {
         System.out.println(str);
     }

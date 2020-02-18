@@ -39,7 +39,7 @@ public class JmsConfig {
         DefaultJmsListenerContainerFactory factory = new DefaultJmsListenerContainerFactory();
         configurer.configure(factory, connectionFactory);
         factory.setClientId("primeiroTopicoId");
-        //factory.setPubSubDomain(true);
+        factory.setPubSubDomain(true);
         factory.setSubscriptionDurable(true);
         return factory;
     }
@@ -52,7 +52,7 @@ public class JmsConfig {
     @Bean
     public JmsTemplate jmsTemplateTopic() {
         JmsTemplate jmsTemplate = new JmsTemplate(connectionFactory());
-        //jmsTemplate.setPubSubDomain(true);
+        jmsTemplate.setPubSubDomain(true);
         return jmsTemplate;
     }
 }
