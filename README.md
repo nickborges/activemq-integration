@@ -25,6 +25,10 @@
 ###### 7. Seletor dentro do tópico
     https://activemq.apache.org/selectors.html
     
+    - Não podem ser usados para buscar valores dentro do corpo da mensagem
+    - Possuem uma sintaxe parecida com SQL para busca de informações.
+    - Buscam valores apenas nos headers (cabeçalho) e properties (propriedades) das mensagens.
+
 	*Producer*
 
 	public void runTopiSelector(String msg, boolean ativo) {
