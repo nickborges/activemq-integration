@@ -49,7 +49,7 @@
         System.out.println(str);
     }
 
-###### 8. Mensagens especificas(ActiveMq DLQ , Death Letter Queue)
+###### 8. Mensagens especificas(ActiveMq DLQ , Dead Letter Queue)
     - Ocorre quando um consumidor tentar ler a mensagem(queue ou topic) diversas vezes e não consegue, é jogado para uma fila especial chamada de activemq.DLQ
 
     - por padrão o ActiveMQ tenta entregar 6x a mensagem
