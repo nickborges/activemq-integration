@@ -18,10 +18,10 @@
     http://0.0.0.0:8161/
 ###### 4. ActiveMQ Jolokia REST API 
     http://0.0.0.0:8161/api/jolokia/
-###### 5. Criar o consumidor e criador das mensagens
+###### 5. Criar o Consumer e o Producer
 	https://activemq.apache.org/jndi-support.html
 ###### 6. Criar os tópicos
-
+    
 ###### 7. Seletor dentro do tópico
     https://activemq.apache.org/selectors.html
 
@@ -49,11 +49,31 @@
         System.out.println(str);
     }
 
-###### 8. Mensagens especificas(ActiveMq DLQ , Dead Letter Queue)
-    - Ocorre quando um consumidor tentar ler a mensagem(queue ou topic) diversas vezes e não consegue, é jogado para uma fila especial chamada de activemq.DLQ
+###### 8. Mensagens especificas e Tratamento de erro
+    ActiveMq DLQ , Dead Letter Queue:
+        - Ocorre quando um consumidor tentar ler a mensagem(queue ou topic) diversas vezes e não consegue, é jogado para uma fila especial chamada de activemq.DLQ
 
-    - por padrão o ActiveMQ tenta entregar 6x a mensagem
+        - por padrão o ActiveMQ tenta entregar 6x a mensagem
 
-###### 9. Tratamento de erro 
-    
+    Tipos de Sessão no consumidor:
+        - AUTO_ACKNOWLEDGE
+        - CLIENT_ACKNOWLEDGE
+        - SESSION_TRANSACTED (Session session = connection.createSession(true, Session.SESSION_TRANSACTED); > permite efeturar rollback na transação )
+
+###### 9. Fila de Log
+    Criar um projeto para salvar os logs
+
+###### 10. Observações:
+    - Ao produzir uma mensagem deve salvar ela? caso o ActiveMQ caía as mensagens ficam salvas(por padrão não ficam salvas, se cair elas somem).
+        messagePostProcessor.setJMSDeliveryMode(DeliveryMode.PERSISTENT);
+
+    - Prioridade da mensagem na fila, quanto maior o número mais alta a prioridade de 0 até 9
+        messagePostProcessor.setJMSPriority(9);
+
+    - Tempo de vida de mensagem em milesegundos
+        messagePostProcessor.setJMSDeliveryTime(5000);
+
+
+
+
 
