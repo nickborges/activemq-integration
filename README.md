@@ -24,7 +24,7 @@
 
 ###### 7. Seletor dentro do tópico
     https://activemq.apache.org/selectors.html
-    
+
     - Não podem ser usados para buscar valores dentro do corpo da mensagem
     - Possuem uma sintaxe parecida com SQL para busca de informações.
     - Buscam valores apenas nos headers (cabeçalho) e properties (propriedades) das mensagens.
@@ -48,3 +48,12 @@
     public void onReceiverTopic(String str) {
         System.out.println(str);
     }
+
+###### 8. Mensagens especificas(ActiveMq DLQ , Death Letter Queue)
+    - Ocorre quando um consumidor tentar ler a mensagem(queue ou topic) diversas vezes e não consegue, é jogado para uma fila especial chamada de activemq.DLQ
+
+    - por padrão o ActiveMQ tenta entregar 6x a mensagem
+
+###### 9. Tratamento de erro 
+    
+
